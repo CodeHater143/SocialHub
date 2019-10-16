@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            <%= title%>
+        </title>
+        <!-- style used for layout.ejs -->
+        <link rel="stylesheet" href="/css/layout.css">
+        <!-- style of sub pages  -->
+        <%- style%>
+    </head>
+
+    <body>
+        <%- include('_header')%>
+
+        <%- body%>
+        
+        <%- include('_footer')%>
+        <!-- scripts of sub pages -->
+        <%- script%>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            <%= title%>
+        </title>
+        <!-- style used for layout.ejs -->
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <!-- style of sub pages  -->
+        <%- style%>
+    </head>
+
+    <body>
+        <% if(flash.success && flash.success.length>0){%>
+            <h1>
+                <%= flash.success%>
+           </h1>   
+        <%}%>
+
+        <%- include('_header')-%>
+        <main id="layout-main">
+            <%- body%>
+        <main>
+        
+        <%- include('_footer')-%>
+
+        <!-- scripts of sub pages -->
+        <%- script%>
+        
+    </body>
+</html>
